@@ -32,7 +32,7 @@ router.get('/search', async (req, res) => {
     const items = await db.collection(collectionName)
         .find({ 
             // title: terms
-            items: RegExp(terms , 'i')   // JavaScript RegExp syntax is supported by MongoDB
+            beds: RegExp(terms , '2')   // JavaScript RegExp syntax is supported by MongoDB
         }) 
         .limit(10)
         .toArray()
