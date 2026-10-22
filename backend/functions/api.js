@@ -65,12 +65,3 @@ if (!process.env.NETLIFY) {
             process.exitCode = 1
         })
 }
-app.get('/api/data', async (req, res) => {
-  try {
-    const data = await fetchDataFromDb();
-    res.json(data);
-  } catch (err) {
-    console.error(err); // This will show in your server terminal
-    res.status(500).send('Internal Server Error');
-  }
-});
